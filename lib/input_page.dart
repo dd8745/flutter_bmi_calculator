@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const bottomContainerHeight = 80.0;
+const bottomBarColor = Color(0xFFEB1555);
+const cardColor = Color(0xFF1D1E33);
+
 class InputPage extends StatefulWidget {
   const InputPage({Key? key}) : super(key: key);
 
@@ -22,18 +26,18 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                     child: ReusableCard(
-                  changingColor: Color(0xFF1D1E33),
+                  changingColor: cardColor,
                 )),
                 Expanded(
                     child: ReusableCard(
-                  changingColor: Color(0xFF1D1E33),
+                  changingColor: cardColor,
                 )),
               ],
-            )),Elogium neuter ignigena est.Cur repressor favere?
+            )),
             Expanded(
               child: Expanded(
                   child: ReusableCard(
-                changingColor: Color(0xFF1D1E33),
+                changingColor: cardColor,
               )),
             ),
             Expanded(
@@ -41,15 +45,21 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                     child: ReusableCard(
-                  changingColor: Color(0xFF1D1E33),
+                  changingColor: cardColor,
                 )),
                 Expanded(
                   child: ReusableCard(
-                    changingColor: Color(0xFF1D1E33),
+                    changingColor: cardColor,
                   ),
                 ),
               ],
             )),
+            Container(
+              color: bottomBarColor,
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: bottomContainerHeight,
+            )
           ],
         ));
   }
@@ -57,6 +67,7 @@ class _InputPageState extends State<InputPage> {
 
 class ReusableCard extends StatelessWidget {
   final Color changingColor;
+
   ReusableCard({required this.changingColor});
 
   @override
